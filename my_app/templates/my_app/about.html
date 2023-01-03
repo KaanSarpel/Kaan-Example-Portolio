@@ -1,0 +1,153 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+
+<body>
+
+  <section class="about-me">
+    <h2>About Me</h2>
+    <p class="about-me-border"></p>
+    <p>Let me tell you a little about myself and what I do...</p>
+  </section>
+  
+  <section class="about-me-content">
+    <div class="container">
+      <div class="about-me-content-flex">
+       <img src="{% static 'img/about.jpg' %}" alt="#">
+         <div class="about-me-content-text">
+           <h2>Your Project Is In Safe Hands</h2>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe enim similique exercitationem inventore. Hic, ipsum excepturi aut nostrum nesciunt itaque?</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="container">
+    <div class="awards-flex">
+      <div class="awards-card">
+        <i class="fas fa-award fa-3x"></i>
+        <p class="bold-numbers">Award One</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, delectus.</p>
+      </div>
+      <div class="awards-card">
+        <i class="fas fa-award fa-3x"></i>
+        <p class="bold-numbers">Award Two</p>
+        <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, delectus.</p>
+      </div>
+      <div class="awards-card">
+        <i class="fas fa-award fa-3x"></i>
+        <p class="bold-numbers">Award Three</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, delectus.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="technical-skills">
+    <div class="container">
+      <div class="technical-skills-header">
+        <h2>Techinical Skills</h2>
+        <p class="about-me-border"></p>
+      </div>
+      <div class="skills">
+        <p>PHOTOGRAPHY:</p>
+        <div class="skill-bar-background">
+        <p class="skill-bar"></p>
+        </div>
+        <p>ADOBE PHOTOSHOP:</p>
+        <div class="skill-bar-background">
+        <p class="skill-bar-2"></p>    
+        </div>
+        <p>ADOBE ILLUSTRATOR:</p>
+        <div class="skill-bar-background">
+        <p class="skill-bar-3"></p>
+        </div>
+        <p>HTML & CSS::</p>
+        <div class="skill-bar-background">
+        <p class="skill-bar-4"></p>
+        </div>    
+        <p>WORDPRESS:</p>
+        <div class="skill-bar-background">  
+        <p class="skill-bar-5"></p>
+        </div>
+        <p>MAGENTO::</p>
+        <div class="skill-bar-background">  
+        <p class="skill-bar-6"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-page-logos-background">
+    <div class="container">
+      <div class="about-page-logos">
+        <img src="{% static 'img/about-logos/logo-envato.png'%}" alt="#">
+        <img src="{% static 'img/about-logos/logo-wordpress.png'%}" alt="">
+        <img src="{% static 'img/about-logos/logo-woocommerce.png'%}" alt="">
+        <img src="{% static 'img/about-logos/logo-magento.png'%}" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="about-me">
+    <h2>Testimonials</h2>
+    <p class="about-me-border"></p>
+    <p>Take a look at what my clients say..</p>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="testimonials-flex">
+        <div class="testimonials-flex-card-1"> 
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium illum nesciunt temporibus expedita eum rerum omnis earum ab deleniti consequuntur quisquam, esse, in harum voluptatibus nihil tempore saepe?</p>
+          <div class="testimonials-profiles">
+            <img src="{% static 'img/testimonials/person1.jpg'%}" alt="#">
+            <p>Sam Smith,New York</p>
+          </div>
+        </div>
+        <div class="testimonials-flex-card-1"> 
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium illum nesciunt temporibus expedita eum rerum omnis earum ab deleniti consequuntur quisquam, esse, in harum voluptatibus nihil tempore saepe?</p>
+          <div class="testimonials-profiles">
+            <img src="{% static 'img/testimonials/person2.jpg'%}" alt="#">
+            <p>Sara Williams, Michigan</p>
+          </div>
+        </div>
+        <div class="testimonials-flex-card-1"> 
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium illum nesciunt temporibus expedita eum rerum omnis earum ab deleniti consequuntur quisquam, esse, in harum voluptatibus nihil tempore saepe?</p>
+          <div class="testimonials-profiles">
+            <img src="{% static 'img/testimonials/person3.jpg'%}" alt="#">
+            <p>Jill Johnson, London</p>
+          </div>
+        </div>
+        <div class="testimonials-flex-card-1"> 
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium illum nesciunt temporibus expedita eum rerum omnis earum ab deleniti consequuntur quisquam, esse, in harum voluptatibus nihil tempore saepe?</p>
+          <div class="testimonials-profiles">
+            <img src="{% static 'img/testimonials/person4.jpg'%}" alt="#">
+            <p>Steve Thompson, Boston</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-flex">
+        <div class="footer-content">
+        <p>Copyright © 2019. All Rights Reserved</p>
+        </div>
+        <div class="footer-icons">
+          <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoidHIifQ%3D%3D%22%7D"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.facebook.com/campaign/landing.php?&campaign_id=1603087355&extra_1=s%7Cc%7C305038450781%7Ce%7Cfacebook%27%7C&placement=&creative=305038450781&keyword=facebook%27&partner_id=googlesem&extra_2=campaignid%3D1603087355%26adgroupid%3D61834755758%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-362360550869%26loc_physical_ms%3D1012782%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=EAIaIQobChMIx7bx7e2o_AIVppBoCR3kSQkMEAAYASAAEgJZlPD_BwE"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://tr.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+{% endblock %}

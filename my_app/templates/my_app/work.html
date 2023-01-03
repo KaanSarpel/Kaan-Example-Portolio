@@ -1,0 +1,48 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+
+<body>
+  
+  <section class="about-me">
+    <h2>MY WORK</h2>
+    <p class="about-me-border"></p>
+    <p>Check out some of my projects</p>
+  </section>
+  
+  <section>
+    <div class="container">
+      <div class="work-grid">
+        <img src="{% static 'img/items/item1.png'%}" alt="">
+        <img src="{% static 'img/items/item2.png'%}" alt="">
+        <img src="{% static 'img/items/item3.png'%}" alt="">
+        <img src="{% static 'img/items/item4.png'%}" alt="">
+        <img src="{% static 'img/items/item5.png'%}" alt="">
+        <img src="{% static 'img/items/item6.png'%}" alt="">
+        <img src="{% static 'img/items/item7.png'%}" alt="">
+        <img src="{% static 'img/items/item8.png'%}" alt="">
+        <img src="{% static 'img/items/item9.png'%}" alt="">
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <div class="footer-flex">
+        <div class="footer-content">
+        <p>Copyright © 2019. All Rights Reserved</p>
+        </div>
+        <div class="footer-icons">
+          <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoidHIifQ%3D%3D%22%7D"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.facebook.com/campaign/landing.php?&campaign_id=1603087355&extra_1=s%7Cc%7C305038450781%7Ce%7Cfacebook%27%7C&placement=&creative=305038450781&keyword=facebook%27&partner_id=googlesem&extra_2=campaignid%3D1603087355%26adgroupid%3D61834755758%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-362360550869%26loc_physical_ms%3D1012782%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=EAIaIQobChMIx7bx7e2o_AIVppBoCR3kSQkMEAAYASAAEgJZlPD_BwE"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://tr.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+{% endblock %}

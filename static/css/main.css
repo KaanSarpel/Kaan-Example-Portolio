@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;700&display=swap');
+@import "utilities.css";
+
+/* General Styles */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* So the padding doesn't take off the width. */
+}
+
+body{
+  font-family: 'Dosis',sans-serif;
+  line-height: 1.6;
+  background: #fff;
+}
+
+a{
+  text-decoration: none;
+  color: #333;
+}
+
+ul{
+  list-style: none;
+}
+
+h2, h3, h4{
+  text-transform: uppercase;
+}
+
+img{
+  width: 100%; /* So we are keeping them in their containers */
+}
+
+/* Navigation  */
+
+.main-nav{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.main-nav ul{
+  display: flex;
+}
+
+.main-nav li{
+  padding: 1rem 1.5rem;
+}
+
+.main-nav a{
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.main-nav a:hover{
+  border-bottom: 3px #f4f4f4 solid;
+}
+
+.logo{
+  width: 70px;
+  height: 70px;
+}
+
+/* Header */
+
+.header-home{
+  background-image: url("../img/showcase.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+
+.header-content{
+  text-align: center;
+  padding-top: 20%;
+}
+
+.header-content h1{
+  font-size: 4rem;
+  line-height: 1.2;
+}
+
+.developer{
+  color: #ffbc00;
+}
+
+/* Specialize */
+
+.specialize{
+  text-align: center;
+  padding-top: 2%;
+}
+
+.bottom-line {
+  height: 3px;
+  width: 3rem;
+  background: #ffbc00;
+  display: block;
+  margin: 1rem auto;
+}
+
+.specialize-flex{
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem
+}
+
+.specialize-card i{
+  color: #ffbc00;
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.specialize h2{
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+/* Stats */
+
+.stats-grid{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.stats-card-1 {
+  background-color: #f4f4f4 ;
+  padding: 2rem 0rem;
+}
+
+.stats-card-2 {
+  background-color: #ccc;
+  padding: 2rem 0rem;
+}
+
+.stats-grid i{
+  font-size: 3rem;
+}
+
+.stats-grid p{
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.bold-numbers{
+  font-weight:600;
+  margin-top: 0;
+}
+
+/* Process */
+
+.process{
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2rem;
+}
+
+.process-flex{
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem
+}
+
+.process-card{
+  position: relative;
+}
+
+.process-card i{
+  color: #f4f4f4;
+  background-color: #333;
+  font-size: 4rem;
+  padding: 2rem 2rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  transition: all 1s;
+}
+
+.process-card i:hover{
+  background-color: #ffbc00;
+  padding: 3rem 3rem;
+}
+
+.process-card i:hover ~ .process-icon-number{ 
+  background: #333;
+  transition: all 1s;
+  padding: 0.2rem 1.2rem;
+}
+
+.specialize h2{
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.process-icon-number{
+  background-color: #ffbc00;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 0.1rem 1rem;
+  color: #f4f4f4;
+  position: absolute;
+  top: 0;
+  left: 60%;
+}
+
+/* Footer */
+
+footer{
+  background-color: #333;
+  padding: 1rem 0rem;
+  color: #f4f4f4;
+}
+
+.footer-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-icons i{
+  font-size: 1rem;
+  padding: 0.7rem 0.7rem;
+  margin: 0rem 0.2rem;
+  border: solid 1px white;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.footer-icons i:hover{
+background-color:#ffbc00 ;
+}
+
+/* About Page */
+
+
+/* Nav */
+
+.about-page{
+  background-image: url("../img/showcase.jpg");
+  background-repeat: no-repeat;
+  background-position: 20% 30%;
+  background-size: cover;
+  height: 5.5rem
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+
+.about-page{
+  border-bottom: 2px solid #ffbc00;
+}
+
+/* About Me */
+
+.about-me{
+  text-align: center;
+  margin: 3rem 0rem;
+}
+
+.about-me h2{
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.about-me p{
+  font-size: 1.5rem;
+}
+
+.about-me-border{
+  height: 2px;
+  width: 3rem;
+  background: #ffbc00;
+  margin: 0 auto 1rem auto;
+}
+
+.about-me-content-flex{
+  display: flex;
+  gap: 3rem;
+}
+
+.about-me-content-flex img{
+  width: 35%;
+}
+
+.about-me-content-text{
+  text-align: center;
+  background-color: #f4f4f4;
+  border-left: 3px solid #ffbc00;
+  padding-top: 1rem;
+}
+
+/* Awards */
+
+.awards-flex{
+  display: flex;
+  margin-top: 3rem;
+}
+
+.awards-card{
+  text-align: center;
+}
+
+.awards-flex i{
+  color: #ffbc00;
+}
+
+.awards-flex p{
+  margin: 0.5rem 0rem;
+}
+
+.awards-card .bold-numbers{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+/* Technical Skills */
+
+.technical-skills{
+  background-color: #333;
+  color: #fff;
+}
+
+.technical-skills-header{
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.technical-skills-header p{
+  margin-top: 0.7rem;
+}
+
+.technical-skills-header h2{
+  font-weight: 400;
+}
+
+.skill-bar{
+  background-color: #ffbc00;
+  padding: 10px 10px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  width: 85%;
+}
+
+.skill-bar-2{
+  background-color: #ffbc00;
+  padding: 10px 10px;
+  border-radius: 5px;
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+.skill-bar-3{
+  background-color: #ffbc00;
+  padding: 10px 10px;
+  border-radius: 5px;
+  width: 95%;
+  margin-bottom: 1rem;
+}
+
+.skill-bar-4{
+  background-color: #ffbc00;
+  padding: 10px 10px;
+  border-radius: 5px;
+  width: 90%;
+  margin-bottom: 1rem;
+}
+
+.skill-bar-5{
+  background-color: #ffbc00;
+  padding: 10px 10px;
+  border-radius: 5px;
+  width: 95%;
+  margin-bottom: 1rem;
+}
+
+.skill-bar-6{
+  background-color: #ffbc00;
+  padding: 10px 10px;
+  border-radius: 5px;
+  width: 85%;
+  margin-bottom: 1rem;
+}
+
+.skill-bar-background{
+  background-color: #ccc;
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* About-Page-Logos */
+
+.about-page-logos-background{
+  background-color: #f4f4f4;
+  padding: 4rem 0rem;
+}
+.about-page-logos{
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-page-logos img{
+  width: 15%;
+}
+
+/* Testimonials Flex */
+
+.testimonials-flex{
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 3rem;
+}
+
+.testimonials-flex-card-1 p{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.testimonials-profiles img{
+  width: 20%;
+  border-radius: 50%;
+}
+
+.testimonials-profiles{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Work Page */
+
+.work-grid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.work-grid img:hover{
+  transform: rotate(360deg);
+  transition: all 2s;
+}
+
+/* Contact Page */
+
+.contact-grid{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2rem;
+}
+
+.contact-textarea{
+  grid-column: 1 / span 2;
+  padding: 10px;
+}
+
+.contact-grid input{
+  padding: 10px;
+}
+
+.contact-grid .btn-dark{
+  grid-column: 1 / span 2;
+  width: 25%;
+  justify-self: center;
+}
+
+.contact-form{
+  height: 90vh;
+}
+
+/* Login Page */
+
+.login-flex{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.login-flex input{
+  padding: 5px 0px;
+  margin: 10px;
+}
+
+.login-flex .btn-dark{
+  padding: 10px 0px;
+}
+
+/* Password Reset */
+
+.email{
+  margin: 0;
+  padding: 0;
+  color: red;
+}
+

@@ -1,0 +1,142 @@
+{% extends 'main2.html' %}
+{% block content %}
+{% load static %}
+
+<body>
+
+  <header class="header-home">
+    <div class="container">
+      <nav class="main-nav">
+        <img src="{% static 'img/logo.png' %}" alt="My Portfolio" class="logo">
+        <ul>
+          <li><a href="{% url 'home' %}" class="{% if request.path == home %} current {% endif %}">Home</a></li>
+          <li><a href="{% url 'about' %}" class="{% if request.path == about %} current {% endif %}">About</a></li>
+          <li><a href="{% url 'work' %}" class="{% if request.path == work %} current {% endif %}">Work</a></li>
+          <li><a href="{% url 'contact' %}" class="{% if request.path == contact %} current {% endif %}">Contact</a></li>
+          {% if request.user.is_authenticated %}
+          <li><a href="{% url 'logout' %}" class="{% if request.path == logout %} current {% endif %}">Logout</a></li>
+          {% else %}
+          <li><a href="{% url 'login' %}" class="{% if request.path == login %} current {% endif %}">Login/Register</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+      <div class="header-content">
+        <h1>I Am John The <span class="developer">Developer</span></h1>
+        <p class="lead">I specialize in graphic design, UI/UX and photography</p>
+        <a href="work.html" class="btn-light">View My Work</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="specialize">
+    <div class="container">
+      <div class="specialize-content">
+        <h2>I specialize in </h2>
+        <p class="bottom-line"></p>
+        <p>Photography as well as creating digital masterpieces and UI/UX layouts for websites and mobile applications</p>
+      </div>
+      <div class="specialize-flex">
+        <div class="specialize-card">
+          <i class="fa-regular fa-file-lines"></i>
+          <h3>Concepting</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nihil perspiciatis, ab doloribus ea sunt ad neque sint aspernatur, incidunt vero. Soluta labore error ullam.</p>
+        </div>
+        <div class="specialize-card">
+          <i class="fa-solid fa-tv"></i>
+          <h3>UI/UX</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nihil perspiciatis, ab doloribus ea sunt ad neque sint aspernatur, incidunt vero. Soluta labore error ullam.</p>
+        </div>
+        <div class="specialize-card">
+          <i class="fa-solid fa-object-ungroup"></i>
+          <h3>VISUAL DESIGN</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nihil perspiciatis, ab doloribus ea sunt ad neque sint aspernatur, incidunt vero. Soluta labore error ullam.</p>
+        </div>
+        <div class="specialize-card">
+          <i class="fa-solid fa-thumbs-up"></i>
+          <h3>INTERACTION</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nihil perspiciatis, ab doloribus ea sunt ad neque sint aspernatur, incidunt vero. Soluta labore error ullam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stats-grid">
+      <div class="stats-card-1">
+        <i class="fa-solid fa-users"></i>
+        <p>Clients</p>
+        <p class="bold-numbers">100</p>
+      </div>
+      <div class="stats-card-2">
+        <i class="fa-solid fa-award"></i>
+        <p>Awards</p>
+        <p class="bold-numbers">3</p>
+      </div>
+      <div class="stats-card-1">
+        <i class="fa-solid fa-hourglass-start"></i>
+        <p>Hours Worked</p>
+        <p class="bold-numbers">3500</p>
+      </div>
+      <div class="stats-card-2">
+        <i class="fa-solid fa-code-branch"></i>
+        <p>Projects Completed</p>
+        <p class="bold-numbers">135</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="container">
+      <div class="specialize-content">
+        <h2>MY CREATIVE PROCESS </h2>
+        <p class="bottom-line"></p>
+        <p>All of my UI/UX and design projects are based off of a practiced formula to get the result that I am looking for</p>
+      </div>
+      <div class="process-flex">
+        <div class="process-card">
+          <i class="fa-regular fa-file-lines"></i>
+          <h3>DISCUSS THE PROJECT</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nihil perspiciatis, ab doloribus ea sunt ad neque sint aspernatur, incidunt vero. Soluta labore error ullam.</p>
+          <p class="process-icon-number">1</p>
+        </div>
+        <div class="process-card">
+          <i class="fa-solid fa-tv"></i>
+          <h3>BRAINSTORMING ^ CONCEPT</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nihil perspiciatis, ab doloribus ea sunt ad neque sint aspernatur, incidunt vero. Soluta labore error ullam.</p>
+          <p class="process-icon-number">2</p>
+        </div>
+        <div class="process-card">
+          <i class="fa-solid fa-object-ungroup"></i>
+          <h3>UI/UX PLANNING</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nihil perspiciatis, ab doloribus ea sunt ad neque sint aspernatur, incidunt vero. Soluta labore error ullam.</p>
+          <p class="process-icon-number">3</p>
+        </div>
+        <div class="process-card">
+          <i class="fa-solid fa-thumbs-up"></i>
+          <h3>INTERACTION</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nihil perspiciatis, ab doloribus ea sunt ad neque sint aspernatur, incidunt vero. Soluta labore error ullam.</p>
+          <p class="process-icon-number">4</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-flex">
+        <div class="footer-content">
+        <p>Copyright © 2019. All Rights Reserved</p>
+        </div>
+        <div class="footer-icons">
+          <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoidHIifQ%3D%3D%22%7D"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.facebook.com/campaign/landing.php?&campaign_id=1603087355&extra_1=s%7Cc%7C305038450781%7Ce%7Cfacebook%27%7C&placement=&creative=305038450781&keyword=facebook%27&partner_id=googlesem&extra_2=campaignid%3D1603087355%26adgroupid%3D61834755758%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-362360550869%26loc_physical_ms%3D1012782%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=EAIaIQobChMIx7bx7e2o_AIVppBoCR3kSQkMEAAYASAAEgJZlPD_BwE"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://tr.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+{% endblock %}

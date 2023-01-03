@@ -1,0 +1,27 @@
+{% load static %}
+
+{% url 'home' as home %}
+{% url 'contact' as contact %}
+{% url 'about' as about %}
+{% url 'work' as work %}
+{% url 'login' as login %}
+{% url 'logout' as logout %}
+
+  <header class="about-page">
+    <div class="container">
+      <nav class="main-nav">
+        <img src="{% static 'img/logo.png' %}" alt="My Portfolio" class="logo">
+        <ul>
+          <li><a href="{% url 'home' %}" class="{% if request.path == home %} current {% endif %}">Home</a></li>
+          <li><a href="{% url 'about' %}" class="{% if request.path == about %} current {% endif %}">About</a></li>
+          <li><a href="{% url 'work' %}" class="{% if request.path == work %} current {% endif %}">Work</a></li>
+          <li><a href="{% url 'contact' %}" class="{% if request.path == contact %} current {% endif %}">Contact</a></li>
+          {% if request.user.is_authenticated %}
+          <li><a href="{% url 'logout' %}" class="{% if request.path == logout %} current {% endif %}">Logout</a></li>
+          {% else %}
+          <li><a href="{% url 'login' %}" class="{% if request.path == login %} current {% endif %}">Login/Register</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+    </div>
+  </header>

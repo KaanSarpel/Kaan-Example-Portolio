@@ -1,0 +1,68 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+
+{% if page == 'register' %}
+
+<style>
+  .login-flex input {
+    margin: 0;
+  }
+</style>
+<section class="about-me">
+  <h2>Register an Account</h2>
+  <p class="about-me-border"></p>
+
+  <section class="login-form">
+    <div class="container">
+      <form method="POST" action="{% url 'register' %}" class="login-flex">
+        {% csrf_token %} 
+        {% for field in form %}
+        {{field.label}}
+        {{field}}
+        {% for error in field.errors %}
+        <p style="color: #ffbc00;">{{error}}</p>
+        {% endfor %}
+        {% endfor %}
+        <input type="submit" class="btn-dark" value="Register">
+      </form>
+      <div class="login-form-content">
+        <a href="#">Forget Password?</a>
+        <p>Already have an account?</p>
+        <a href="{% url 'login' %}">Log In</a>
+      </div>
+    </div>
+  </section>
+</section>
+
+{% else %}
+
+<section class="about-me">
+  <h2>Account Login</h2>
+  <p class="about-me-border"></p>
+  <p>Hello, Welcome Back!</p>
+
+  <section class="login-form">
+    <div class="container">
+      <form method="POST" action="#" class="login-flex">
+        {% csrf_token %} 
+        <input type="text" placeholder="Username" name="username">
+        <input type="password" placeholder="Password" name="password">
+        <input type="submit" class="btn-dark" value="Log In">
+      </form>
+      <div class="login-form-content">
+        <a href="{% url 'reset_password' %}">Forget Password?</a>
+        <p>Don’t have an Account?</p>
+        <a href="{% url 'register' %}">Sign Up</a>
+      </div>
+    </div>
+  </section>
+</section>
+
+{% endif %}
+
+{% endblock content %}
+
+

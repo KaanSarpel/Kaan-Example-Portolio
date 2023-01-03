@@ -1,0 +1,54 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+
+<body>
+  
+  {% if request.user.is_authenticated %}
+  <section class="about-me">
+    <h2>Contact Me</h2>
+    <p class="about-me-border"></p>
+    <p>Here is how you can reach me</p>
+  </section>
+  
+  <section class="contact-form">
+    <div class="container">
+      <form method="POST" class="contact-grid">
+        {% csrf_token %} 
+        <input type="text" placeholder="Name" name="name">
+        <input type="text" placeholder="Subject" name="subject">
+        <input type="text" placeholder="Email" name="email">
+        <input type="text" placeholder="Phone Number" name="phone">
+        <textarea name="message" class="contact-textarea" placeholder="Enter Message" cols="30" rows="5"></textarea>
+        <button type="submit" class="btn-dark">Submit</button>
+      </form>
+    </div>    
+</section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-flex">
+        <div class="footer-content">
+        <p>Copyright © 2019. All Rights Reserved</p>
+        </div>
+        <div class="footer-icons">
+          <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoidHIifQ%3D%3D%22%7D"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.facebook.com/campaign/landing.php?&campaign_id=1603087355&extra_1=s%7Cc%7C305038450781%7Ce%7Cfacebook%27%7C&placement=&creative=305038450781&keyword=facebook%27&partner_id=googlesem&extra_2=campaignid%3D1603087355%26adgroupid%3D61834755758%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-362360550869%26loc_physical_ms%3D1012782%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=EAIaIQobChMIx7bx7e2o_AIVppBoCR3kSQkMEAAYASAAEgJZlPD_BwE"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://tr.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  {% else %}
+  <section class="about-me">
+    <h2>Contact Me</h2>
+    <p class="about-me-border"></p>
+    <p>Please<a style="color: brown;font-weight: bold;" href="{% url 'login' %}?next={{request.path}}"> login </a>in order to access this page.</p>
+  </section>
+  {% endif %}
+  
+</body>
+
+
+{% endblock %}

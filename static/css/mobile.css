@@ -1,0 +1,154 @@
+/* Hero */
+
+.header-home{
+  height: 80vh;
+}
+
+
+/* Navigation  */
+
+.main-nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-nav ul{
+  font-size: 0.7rem;
+}
+
+/* Specialize */
+
+.specialize-flex{
+  flex-direction: column;
+  margin-top: 0.5rem;
+}
+.specialize-card{
+  margin-top: 1.5rem;
+}
+
+.specialize-content{
+  margin-top: 1.5rem;
+}
+
+.specialize h2{
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+/* Stats */
+
+.stats-grid{
+  grid-template-columns: 1fr;
+}
+
+/* Process */
+
+.process-flex{
+  flex-direction: column;
+}
+
+.process-icon-number{
+  left: 58%;
+}
+
+/* Footer */
+
+.footer-flex{
+flex-direction: column;
+}
+
+.footer-icons{
+  margin-top: 1rem;
+}
+
+
+/* About Me */
+
+
+.about-me p{
+  font-size: 1.2rem;
+}
+
+.about-me-content-flex{
+  flex-direction: column;
+}
+
+.about-me-content-flex img{
+  width: 100%;
+}
+
+.about-me-content-text{
+  padding-bottom: 1rem;
+}
+
+/* Awards */
+
+.awards-flex{
+  flex-direction: column;
+}
+
+/* Technical Skills */
+
+.technical-skills{
+  margin-top: 1.5rem;
+}
+
+/* Logos */
+
+.about-page-logos img{
+  width: 20%;
+}
+
+/* Testimonials */
+
+.testimonials-flex{
+  flex-direction: column;
+}
+
+.testimonials-flex-card-1 {
+  margin-bottom: 2rem;
+}
+
+/* Work Page */
+
+.work-grid{
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+/* Contact Page */
+
+.contact-grid{
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.contact-textarea{
+  grid-column: 1 / span 2;
+  width: 80%;
+}
+
+.contact-grid input{
+  padding: 5px;
+  width: 80%;
+}
+
+.btn-dark{
+  grid-column: 1 ;
+  width: 25%;
+  justify-self: center;
+  margin-bottom: 2rem;
+}
+
+/* Login Page */
+
+.login-flex{
+  width: 100%;
+}
+
+.login-flex .btn-dark{
+  align-self: center;
+  width: 50%;
+}
+

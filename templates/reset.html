@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<!-- Main Section -->
+<style>
+    .login-flex input{
+        margin: 10px 0;
+    }
+</style>
+
+<section class="about-me">
+    <h2>ENTER NEW PASSWORD</h2>
+    <p class="about-me-border"></p>
+</section>  
+    <section class="login-form">
+      <div class="container">
+        <form method="POST" class="login-flex">
+          {% csrf_token %} 
+          {% for field in form %}
+          {{field.label}}
+          {{field}}
+          {% for error in field.errors %}
+          <p style="color: #ffbc00;">{{error}}</p>
+          {% endfor %}
+          {% endfor %}
+          <input type="submit" class="btn-dark" value="Submit">
+        </form>
+      </div>
+    </section>
+</section>
+
+{% endblock content %}
